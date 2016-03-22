@@ -1,0 +1,187 @@
+<br/>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<form name="projectForm">
+				<fieldset>
+					<button type="button" class="btn btn-success" ng-click="save()">Save</button>
+					<br/>
+					
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<label>{{project.ProjectNumber}} - {{project.ProjectTitle}}</label>
+						</div>
+						<div class="panel-body">
+						
+						<uib-tabset active="active">
+    						<uib-tab index="0" heading="Basic">
+								<div class="row">
+									<div class="col-md-2">
+										<label for="projectNumber">Project Number:</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.ProjectNumber"
+												id="projectNumber" name="projectNumber" required />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2">
+										<label for="projectTitle">Project Title:</label>
+									</div>
+									<div class="col-md-10">
+										<input type="text" class="form-control"
+											ng-model="project.ProjectTitle" id="projectTitle" name="projectTitle" required />
+									</div>
+								</div>	
+								<div class="row">
+									<div class="col-md-2">
+										<label for="projectOwner">Office</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.ProjectOwner"
+												id="projectOwner" name="projectOwner">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="focalPerson">Focal Person</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.ProjectOwnerFocalPerson"
+											id="projectOwnerFocalPerson" name="projectOwnerFocalPerson">
+									</div>
+								</div>						
+								<div class="row">
+									<div class="col-md-2">
+										<label for="office">HQ Focal Office</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.Office"
+												id="office" name="office">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="focalPerson">HQ Focal Person</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.FocalPerson"
+											id="focalPerson" name="focalPerson">
+									</div>
+								</div>						
+								<div class="row">
+									<div class="col-md-2">
+										<label for="notifyTo">Notify To</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.NotifyTo"
+												id="notifyTo" name="notifyTo">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="assistant">Administrative Assistant</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.Assistant"
+											id="assistant" name="assistant">
+									</div>
+								</div>						
+								<div class="row">
+									<div class="col-md-2">
+										<label for="notifyTo">Source of Funds</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.SourceFund"
+												id="sourceFund" name="sourceFund">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="assistant">Issues Addressed</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.IssuesAddressed"
+											id="issuesAddressed" name="issuesAddressed">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2">
+										<label for="region">Region</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.Region"
+												id="region" name="region">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="country">Country</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.Country"
+											id="country" name="country">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2">
+										<label for="startDate">Start Date</label>
+									</div>
+									<div class="col-md-4">
+											<input type="text"
+												class="form-control" ng-model="project.StartDate"
+												id="startDate" name="startDate">
+	
+									</div>
+									<div class="col-md-2">
+										<label for="endDate">End Date</label>
+									</div>
+									<div class="col-md-4">
+										<input type="text"
+											class="form-control" ng-model="project.EndDate"
+											id="endDate" name="endDate">
+									</div>
+								</div>
+																<div class="row">
+									<div class="col-md-2">
+										<label for="subProgram">Sub-programme</label>
+									</div>
+									<div class="col-md-10">
+											<input type="text"
+												class="form-control" ng-model="project.SubProgram"
+												id="subProgram" name="subProgram">
+	
+									</div>
+								</div>						
+    						</uib-tab>
+    						
+    						<uib-tab index="1" heading="Posts">
+    							<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Post Level</th>
+											<th>Post Name</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="post in project.Posts">
+											<td>{{post.Level}}</td>
+											<td>{{post.Name}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</uib-tab>
+    					</uib-tabset>
+						</div>
+					</div>
+				</fieldset>
+			</form>			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "project-portfolio",
+  "description": "ProFi Project Portfolio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mjsvoboda/project-portfolio",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+	"fontawesome": "latest",
+    "angular-ui-router": "latest",
+	"angular-bootstrap": "latest",
+	"angular-resource": "1.4.x"
+  }
+}

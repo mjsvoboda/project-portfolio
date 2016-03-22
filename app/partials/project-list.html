@@ -1,0 +1,44 @@
+<br/>
+<div class="container">
+  <div class="row">
+  	<button type="button" class="btn btn-success"  ui-sref="administrative.project({id: 'new'})">New</button>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+		<table class="table table-striped table-condensed table-hover">
+			<thead>
+				<tr>
+					<th>Project Number</th>
+					<th>Project Title</th>
+					<th>Project Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="project in projects | filter:query | limitTo : numPerPage : begin | orderBy:orderProp">
+					<td>{{project.ProjectNumber}}</td>
+					<td><a ui-sref="administrative.project({id: project.ProjectNumber})">{{project.ProjectTitle}}</a></td>
+					<td>{{project.ProjectStatus}}</td>
+				</tr>
+			</tbody>
+			<tfoot>
+                    <td colspan="3">
+<!-- 						<div ng-controller="PaginationDemoCtrl"> -->
+    						<uib-pagination total-items="totalItems" items-per-page="numPerPage" ng-model="currentPage" ng-change="pageChanged()" 
+    							boundary-links="true" max-size="7" force-ellipses="true">
+    						</uib-pagination>
+<!--     					</div> -->
+    				</td>
+    			</tfoot>
+		</table>
+		
+		
+    </div>
+  </div>
+</div>

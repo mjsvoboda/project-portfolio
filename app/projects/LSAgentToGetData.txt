@@ -1,0 +1,50 @@
+Sub Initialize
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim doc As NotesDocument
+	Dim tmp () As String
+	Dim strValue As String
+	Dim i As Integer
+		
+	Set db = session.Currentdatabase
+	Set view = db.GetView ("viewProjectEntities")
+	
+	Dim fileNum As Integer
+	fileNum% = FreeFile()
+	Open "C:\Temp\projects.json" For Output As fileNum%
+
+	Print #fileNum%, "["
+	Set doc = view.GetFirstDocument ()
+	Do Until doc Is Nothing
+		Print #fileNum%, "{"
+		
+		'all items
+		ReDim tmp (UBound (doc.Items))
+		i = 0	
+		ForAll item In doc.Items
+			If (item.Type = 768) Then
+				tmp (i) = {"} & item.Name & {": } & item.Values(0)
+			ElseIf (item.Type = 1280) Then
+				strValue = Replace(item.Values(0), Chr(13), " ")
+				strValue = Replace(strValue, Chr(10), "")
+				strValue = Replace(strValue, {"}, "")
+				tmp (i) = {"} & item.Name & {": "} & strValue & {"}
+			Else
+				tmp (i) = ""
+			End If			
+			i = i + 1
+		End ForAll
+		
+		Print #fileNum%, Implode (FullTrim(tmp), ("," & Chr (13)))
+		Set doc = view.GetNextDocument (doc)
+		
+		If (doc Is Nothing) Then
+			Print #fileNum%, "}"
+		Else
+			Print #fileNum%, "},"
+		End If
+	Loop
+	Print #fileNum%, "]"
+	Close fileNum%
+End Sub

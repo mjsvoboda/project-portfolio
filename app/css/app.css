@@ -1,0 +1,68 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 72px;
+}
+
+.applayout-banner {
+	padding-bottom: 4px;
+}
+
+.applayout-banner-container {
+	border: solid;
+	border-width: 0 0 7px;
+	border-color: #6998c9;
+}
+
+.navbar-unitelinks {
+	float: right
+}
+.navbar-unitelinks>li {
+	float: left;
+	cursor: pointer
+}
+
+.navbar-unitelinks>li>a {
+	padding: 3px 5px !important;
+	cursor: pointer
+}
+
+.navbar-unitelinks>li>.dropdown-menu {
+	padding: 15px 15px;
+	width: 300px;
+	border-radius: 3px;
+	right: 0px;
+	left: inherit
+}
+
+.navbar-unitelinks>li>.dropdown-menu {
+	border-radius: 3px
+}
+
+.navbar-unitelinks>li>.dropdown-menu>li {
+	width: 50%;
+	float: left;
+	text-align: center;
+	color: #1b75bb
+}
+
+.navbar-unitelinks>li>.dropdown-menu>li>a {
+	color: #1b75bb
+}
+
+.navbar-unitelinks>li>.dropdown-menu>li>a:hover {
+	color: #f79321
+}
+
+.nav > li > a > i {
+    margin-right: 3px;
+}
+
+.navbar-nav > li > a {
+    font-weight: bold;
+}
+
+.nav-offset-left {
+    margin-left: 10%;
+    float: left;
+}
