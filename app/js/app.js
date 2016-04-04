@@ -7,13 +7,14 @@ var ppApp = angular.module('ppApp', [
 	'ui.router',
 	'ui.bootstrap',
 	'ppAppControllers',
-	'ppAppServices'
+	'ppAppServices',
+	'ppAppDirectives'
 ]);
 
 ppApp.config(['$stateProvider', '$urlRouterProvider',
                function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/projects');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
      .state('administrative', {
@@ -23,7 +24,8 @@ ppApp.config(['$stateProvider', '$urlRouterProvider',
       })
       .state('administrative.home', {
         url: '/home',
-        templateUrl: 'partials/home.html'
+        templateUrl: 'partials/home.html',
+        controller: 'HomeCtrl'
       })
       .state('administrative.projects', {
         url: '/projects',

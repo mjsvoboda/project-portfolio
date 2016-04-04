@@ -1,0 +1,87 @@
+
+[
+  {
+      "Region":"Africa & Middle East",
+      "freq":
+      {
+          "Hard Pipeline":5,
+          "Soft Pipeline":7,
+          "Ongoing":61,
+          "Operationally Completed":13,
+          "Completed":263,
+          "Cancelled":53
+      }
+  },
+  {
+      "Region":"Central & Eastern Europe",
+      "freq":
+      {
+          "Hard Pipeline":1,
+          "Soft Pipeline":4,
+          "Ongoing":3,
+          "Operationally Completed":1,
+          "Completed":96,
+          "Cancelled":22
+      }
+  },
+  {
+      "Region":"East Asia & Pacific",
+      "freq":
+      {
+          "Hard Pipeline":4,
+          "Soft Pipeline":2,
+          "Ongoing":26,
+          "Operationally Completed":11,
+          "Completed":186,
+          "Cancelled":28
+      }
+  },
+  {
+      "Region":"Global",
+      "freq":
+      {
+          "Hard Pipeline":3,
+          "Soft Pipeline":5,
+          "Ongoing":45,
+          "Operationally Completed":6,
+          "Completed":143,
+          "Cancelled":8
+      }
+  },
+  {
+      "Region":"Latin America & Caribbean",
+      "freq":
+      {
+          "Hard Pipeline":2,
+          "Soft Pipeline":3,
+          "Ongoing":66,
+          "Operationally Completed":5,
+          "Completed":309,
+          "Cancelled":13
+      }
+  },
+  {
+      "Region":"South Asia",
+      "freq":
+      {
+          "Hard Pipeline":0,
+          "Soft Pipeline":0,
+          "Ongoing":7,
+          "Operationally Completed":0,
+          "Completed":33,
+          "Cancelled":9
+      }
+  },
+  {
+      "Region":"West & Central Asia",
+      "freq":
+      {
+          "Hard Pipeline":2,
+          "Soft Pipeline":1,
+          "Ongoing":31,
+          "Operationally Completed":4,
+          "Completed":139,
+          "Cancelled":20
+      }
+  }
+]

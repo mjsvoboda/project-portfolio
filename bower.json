@@ -13,6 +13,7 @@
 	"fontawesome": "latest",
     "angular-ui-router": "latest",
 	"angular-bootstrap": "latest",
-	"angular-resource": "1.4.x"
+	"angular-resource": "1.4.x",
+	"d3": "latest"
   }
 }

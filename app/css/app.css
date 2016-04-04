@@ -66,3 +66,34 @@ body {
     margin-left: 10%;
     float: left;
 }
+
+.dev-banner {
+  display: block;
+  position: absolute;
+  top: 3em;
+  right: -5.5em;
+  padding: 1em;
+  width: 20em;
+  text-align: center;
+  background-color: #cd5959;
+  text-transform: uppercase;
+  font-size: .9em;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.dbTitle {
+	margin-left: 5px;
+	font-size: 20px;
+	color: #6998c9;
+	font-weight: bold;
+	float: left;
+}
